@@ -176,6 +176,7 @@ footer a {
 }
 
 #inner-section {
+    position: relative;
     align-items: end;
 }
 
@@ -212,10 +213,10 @@ footer a {
 }
 
 #inner-section #arrow {
-    position: relative;
+    position: absolute;
     width: 30px;
     height: 20px;
-    left: 13%;
+    left: 50%;
     bottom: 20px;
     margin: 0 0 0 -15px;
 }
@@ -224,7 +225,7 @@ footer a {
     fill: none;
 }
 
-@media screen and (max-width: 1256px) {
+@media screen and (max-width: 960px) {
     header {
         height: 60px;
     }

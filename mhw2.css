@@ -1,0 +1,264 @@
+@font-face {
+    font-family: D-DIN-Bold;
+    src: url(D-DIN-Bold.otf) format("opentype");
+}
+
+@font-face {
+    font-family: D-DIN-Regular;
+    src: url(D-DIN.otf) format("opentype");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    font: 16px/26px D-DIN-Regular, Arial, Verdana, sans-serif;
+}
+
+.fade-opacity {
+    transition: opacity 0.3s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+.shadowed {
+    text-shadow: 0 0 2px #555;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    z-index: 100;
+}
+
+header .header-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    transform: translate(0,-100%);
+    transition: transform 0.4s ease;
+}
+
+.inner-header {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+}
+
+#logo {
+    position: relative;
+    width: 210px;
+    height: 26.25px;
+    top: 32px;
+    left: 50px;
+}
+
+#logo img {
+    width: 100%;
+    height: auto;
+}
+
+.inner-header nav {
+    position: relative;
+    height: 30px;
+    top: 38px;
+    left: 75px;;
+}
+
+header nav ul li a {
+    text-transform: uppercase;
+    font: 14px/28px D-DIN-Bold, Arial, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+header li {
+    display: inline-block;
+    margin: 0 12px;
+}
+
+#right-navigation {
+    position: absolute;
+    height: 30px;
+    top: 38px;
+    right: 85px;
+}
+
+#menu-button {
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 44%;
+    right: 50px;
+}
+
+#menu-button div {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    background-color: #ffffff;
+}
+
+#menu-button #bar1 {
+    top: 3px;
+}
+
+#menu-button #bar2 {
+    top: 7px;
+}
+
+#menu-button #bar3 {
+    top: 11px;
+}
+
+#tiles {
+    display: flex;
+    flex-direction: column;
+}
+
+#tiles section {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+}
+
+#inner-section {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+}
+
+#tiles section img,
+#tiles section video {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background: #000000;
+    padding: 20px 0;
+    text-transform: uppercase;
+    font: 12px/24px D-DIN-Bold, Arial, Verdana, sans-serif;
+}
+
+footer span {
+    font: 12px/24px D-DIN-Regular, Arial, Verdana, sans-serif;
+    margin: 0 20px;
+}
+
+footer a {
+    margin: 0 20px;
+}
+
+#inner-section {
+    align-items: end;
+}
+
+#inner-section article {
+    position: relative;
+    width: 50%;
+    max-width: 520px;
+    max-height: 225.5px;
+    bottom: 15%;
+    left: 50px;
+}
+
+#inner-section article p {
+    text-transform: uppercase;
+    margin: 0;
+    font: 20px/38px D-DIN-Regular, Arial, Verdana, sans-serif;
+}
+
+#inner-section article h2 {
+    text-transform: uppercase;
+    max-width: 90%;
+    margin: 0;
+    font: 48px/48px D-DIN-Bold, Arial, Verdana, sans-serif;
+}
+
+#inner-section article a {
+    display: inline-block;
+    margin: 30px 0 0;
+    border: 2px solid #ffffff;
+    min-width: 130px;
+    padding: 0 15px;
+    text-align: center;
+    font: 14px/50px D-DIN-Bold, Arial, Verdana, sans-serif;
+}
+
+#inner-section #arrow {
+    position: relative;
+    width: 30px;
+    height: 20px;
+    left: 13%;
+    bottom: 20px;
+    margin: 0 0 0 -15px;
+}
+
+#inner-section #arrow path {
+    fill: none;
+}
+
+@media screen and (max-width: 1256px) {
+    header {
+        height: 60px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .inner-header {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inner-header #logo {
+        position: static;
+        width: 150px;
+        margin-top: -5px;
+        margin-left: 15px;
+    }
+
+    #inner-section article {
+        max-width: 420px;
+    }
+
+    #inner-section article p {
+        font: 16px/25px D-DIN-Regular, Arial, Verdana, sans-serif;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer div {
+        margin-top: 10px;
+    }
+}
